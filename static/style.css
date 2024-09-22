@@ -1,0 +1,365 @@
+/* Start of merged styles from style.css and styles.css */
+
+/* General styles from style.css */
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  background-color: #FFFCFF;
+}
+
+
+#monthDisplay {
+  color: black;
+  margin-left: 25px;
+  min-width: 100px; /* Set a minimum width to maintain spacing consistency */
+  text-align: center; /* Center the month text */
+  font-family: 'Roboto'
+}
+
+button {
+  width: 75px;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px gray;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+
+
+#header {
+  margin-top: -30px;
+  padding-bottom: 10px;
+  color: #d36c6c;
+  font-size: 26px;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center; /* Aligns items vertically */
+  justify-content: space-between ; /* Distributes space evenly between elements */
+  width: 1200px;
+}
+
+#backButton {
+  padding-left: 10px;
+}
+
+.today {
+  color: black;
+  background-color: transparent;
+  font-size: medium;
+}
+
+#profile {
+  margin-left: auto;
+  text-decoration: none;
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#profile img {
+  width: 30px;
+  height: auto;
+}
+
+#profile:hover {
+  transform: scale(1.2); /* Scale up to 120% of original size */
+}
+
+.icon-button {
+  cursor: pointer;
+  color: black;
+  margin-bottom: 10px;
+}
+
+button.today {
+  margin-left: 20px;
+}
+
+.material-icons {
+  margin-top: 10px;
+  vertical-align: middle;
+}
+
+#container {
+  width: 795px;
+  height: 0px;
+  margin: 0 auto; /* Center the container */
+  margin-left: -50px;
+}
+
+#weekdays {
+  width: 155%;
+  display: flex;
+  color: black;
+  justify-content: center;
+  font-family: 'Merriweather Sans';
+}
+
+#weekdays div {
+  width: calc(100% / 7);
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#calendar {
+  width: 155%; /* Adjust to fit the parent container */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.day {
+  width: calc(100% / 7); /* Make each day take up 1/7th of the width of the parent */
+  height: 70px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 0px 0px 3px #CBD4C2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h2 {
+  font-family: 'DM Sans', sans-serif;
+  padding-bottom: 10px;
+}
+
+.day:hover {
+  background-color: rgba(15, 157, 88, 0.5);
+}
+
+#currentDay {
+  background-color: rgb(26, 115, 232, 0.8);
+  color: white;
+}
+
+#currentDay:hover {
+  background-color: rgba(15, 157, 88, 0.5);
+}
+
+.event {
+  font-size: 10px;
+  padding: 3px;
+  color: white;
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+}
+
+.padding {
+  cursor: default !important;
+  background-color: #FFFCFF !important;
+  box-shadow: none !important;
+}
+
+#deleteEventModal p {
+  margin: 10px 0;
+  font-size: 1em;
+  color: #333;
+}
+
+
+#deleteEventModal #eventTitle {
+  font-family: 'DM Sans', sans-serif;
+  margin-bottom: -10px;
+}
+
+#deleteEventModal img {
+  padding-top: 5px;
+  height: 30px;
+  width: auto;
+}
+
+input[type="radio"] {
+  display: none; /* or use visibility: hidden; */
+}
+
+#colorOptions {
+  padding-bottom: 10px;
+  margin-top: -10px;
+}
+
+#newEventModal, #deleteEventModal {
+  display: none;
+  z-index: 20;
+  padding: 25px;
+  background-color: white;
+  box-shadow: 0px 0px 20px black;
+  border-radius: 10px;
+  width: 350px;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: sans-serif;
+}
+
+
+#eventTitleInput {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px gray;
+}
+
+#eventTitleInput.error {
+  border: 2px solid red;
+}
+
+#cancelButton, #deleteButton {
+  background-color: #ED0800;
+}
+
+#closeButton {
+  background-color: transparent;
+  color: black
+}
+
+#saveButton {
+  background-color: #33b249;
+}
+
+#eventText {
+  font-size: 14px;
+}
+
+#modalBackDrop {
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1); /* Light semi-transparent background */
+  backdrop-filter: blur(10px); /* Adjust blur intensity as needed */
+}
+
+
+
+/* Styles from styles.css */
+/* Size for brand */
+nav .navbar-brand {
+  font-size: xx-large;
+}
+
+nav .nabr {
+  display: block !important;
+}
+
+/* Colors for brand */
+nav .navbar-brand .logo {
+  color: black;
+  font-family: 'Poppins';
+}
+
+nav .navbar-brand img {
+  height: 50px;
+  width: auto;
+}
+
+.profile-container {
+  margin-top: -20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  position        : relative;
+  background-color: #fff;
+  width           : 350px;
+  height          : 440px;
+  padding         : 200px 30px 50px;
+  border-radius   : 12px;
+  box-shadow      : 0 0 60px 05px rgba(0, 0, 0, 0.2);
+  display         : flex;
+  flex-direction  : column;
+  justify-content : center;
+  align-items     : center;
+}
+
+.img-container {
+  width        : 130px;
+  margin-top   : 90px;
+  height       : 130px;
+  overflow     : hidden;
+  border       : 5px solid lightseagreen;
+  border-radius: 50%;
+  box-shadow   : 0 8px 55px lightseagreen;
+  position     : absolute;
+  top          : 0;
+  left         : 50%;
+  transform    : translate(-50%, -50%);
+}
+
+.img-container img {
+  width    : 100%;
+  max-width: 100%;
+  transform: scale(1.1);
+}
+
+.info {
+  margin-bottom: -5px;
+}
+
+.info i {
+  margin-right: 8px;
+  font-size   : 1.1em;
+}
+
+.full-name {
+  font-size     : 1.4em;
+  font-weight   : bold;
+  letter-spacing: 1px;
+  color         : black;
+}
+
+.action {
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  background-color: #d31258;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  width: 80%;
+  margin-top: 25px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.action.message {
+  background-color: #6741ff;
+}
+
+.action:hover {
+  transform: scale(1.05);
+  opacity: 0.85;
+}
+
+.color-choice {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 10px;
+  border: 2px solid transparent;
+}
+label input[type="radio"]:checked + .color-choice {
+  border: 2px solid black; /* Highlight the selected color */
+}
