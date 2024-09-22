@@ -1,3 +1,5 @@
+![](https://www.ntaskmanager.com/wp-content/uploads/2020/01/Anydo-Calendar.jpg)
+
 # Calendar Web App - CS50x Final Project
 
 #### Video Demo: https://youtu.be/q_TlSbrFK08
