@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Calendar
+{% endblock %}
+
+{% block main %}
+    <div class="calendar-container">
+        <div id="container">
+            
+            <div id="header">
+                <div id="controls">
+                    <button class="today" id="todayButton">Today</button>
+                    <div id="backButton" class="icon-button">
+                        <span class="material-icons">arrow_back_ios</span>
+                    </div>
+                    <div id="nextButton" class="icon-button">
+                        <span class="material-icons">arrow_forward_ios</span>
+                    </div>
+                    <div id="monthDisplay"></div>
+                </div>
+            
+                <a href="{{ url_for('profile') }}" id="profile" class="icon-button">
+                    <img src="{{ url_for('static', filename='profile.png') }}" alt="Profile Icon" />
+                </a>
+            </div>                                  
+
+            <div id="weekdays">
+                <div>Sunday</div>
+                <div>Monday</div>
+                <div>Tuesday</div>
+                <div>Wednesday</div>
+                <div>Thursday</div>
+                <div>Friday</div>
+                <div>Saturday</div>
+            </div>
+
+            <div id="calendar"></div>
+        </div>
+
+        <div id="newEventModal">
+            <h2>New Event</h2>
+
+            <div id="colorOptions">
+                <label>
+                    <input type="radio" name="eventColor" value="#ff6347" checked>
+                    <span class="color-choice" style="background-color: #ff6347;"></span>
+                </label>
+                <label>
+                    <input type="radio" name="eventColor" value="#ff8989">
+                    <span class="color-choice" style="background-color: #ff8989;"></span>
+                </label>
+                <label>
+                    <input type="radio" name="eventColor" value="#6f2da8">
+                    <span class="color-choice" style="background-color: #6f2da8;"></span>
+                </label>
+                <label>
+                    <input type="radio" name="eventColor" value="#41424C">
+                    <span class="color-choice" style="background-color: #41424C;"></span>
+                </label>
+            </div>
+
+            <input id="eventTitleInput" placeholder="Event Title"/>
+            <button id="saveButton">Save</button>
+            <button id="cancelButton">Cancel</button>
+        </div>
+
+        <div id="deleteEventModal">
+            <h2 id="eventTitle"></h2>
+            <img src="../static/event-icon.png">
+            <p id="eventDate"></p>
+
+            <button id="deleteButton">Delete</button>
+            <button id="closeButton">Close</button>
+        </div>
+
+        <div id="modalBackDrop"></div>
+    </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block favicon %}
+<link href="/static/profile.png" rel="icon">
+{% endblock %}
+
+{% block title %}Profile{% endblock %}
+
+{% block main %}
+    <div class="profile-container">
+        <div class="img-container">
+            <img src="../static/profile.png" alt="profile image">
+        </div>
+        <p class="info full-name">{{name}}</p>
+        <a class="action message" href="/new-username">Change Username</a>
+        <a class="action message" href="/new-password">Chnage Password</a>
+        <a class="action" href="/logout">Logout</a>
+    </div>
+{% endblock %}
